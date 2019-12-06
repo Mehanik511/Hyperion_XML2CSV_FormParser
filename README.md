@@ -1,14 +1,13 @@
 # Hyperion_XML2CSV_FormParser
 
-<p>Parsing XML-forms from Oracle Hyperion Planning to CSV files for documentation.</p>
 <p>RU: Парсинг XML-форм из Oracle Hyperion Planning в CSV-формат для прикрепления в виде Excel-таблиц в проектной документации.</p>
 
 ## Changelog:
 
 ```
-v1.2   - Added generating output XLSX-file.
-v1.1   - Added ability to process several files; added some optimization.
-v1     - Created main functional.
+v1.2   - Добавлена генерация выходных XLSX-файлов.
+v1.1   - Добавлена возможность работать с несколькими файлами; немного оптимизирован код.
+v1     - Создан основной функционал.
 ```
 
 ## HowTo:

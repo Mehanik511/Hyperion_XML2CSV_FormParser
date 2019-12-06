@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="0101.02a Формирование базы (тест)" dir="Forms/0100 Бюджет/0101 База" hide="false" autoSubmit="false" planType="1" globalAssumptions="false" enableCubeView="false" enableOffline="false" readOnly="false" calcOnAutoSubmit="false" >
+ <query>
+ <columns width="100" >
+ <segment>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Entity" hide="false" expand="true" >
+ <function name="Descendants" >
+ <member name="EN_Total" />
+</function>
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Dim2" hide="false" expand="true" >
+ <function name="Descendants" >
+ <member name="Dim2_Total" />
+</function>
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Dim3" hide="false" expand="true" >
+ <function include="true" name="Children" >
+ <member name="Dim3_parent" />
+</function>
+</dimension>
+</segment>
+ <segment>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Entity" hide="false" expand="true" >
+ <member name="EN_base" />
+ <function name="Descendants" >
+ <member name="EN_Total" />
+</function>
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Dim2" hide="false" expand="true" >
+ <function name="Descendants" >
+ <member name="Dim2_Element2" />
+</function>
+ <member name="Dim2_Element3" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Dim3" hide="false" expand="true" >
+ <function name="ILvl0Descendants" >
+ <member name="Dim3_El" />
+</function>
+</dimension>
+</segment>
+</columns>
+ <rows height="22" >
+ <segment>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Account" hide="false" expand="true" >
+ <function include="true" name="Children" >
+ <member name="AC_PL_Total" />
+</function>
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Level" hide="false" expand="true" >
+ <member name="LV_Total" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Measure" hide="false" expand="true" >
+ <member name="budget_rub" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="View" hide="true" expand="true" >
+ <member name="View_Layer" />
+</dimension>
+</segment>
+ <segment>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Account" hide="false" expand="true" >
+ <member name="AC_NA" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Level" hide="false" expand="true" >
+ <member name="LV_Input" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Measure" hide="false" expand="true" >
+ <member name="budget_usd" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="View" hide="true" expand="true" >
+ <member name="View_NA" />
+</dimension>
+</segment>
+ <segment>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Account" hide="false" expand="true" >
+ <member name="AC_Tech" />
+ <member name="AC_PL_01" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Level" hide="false" expand="true" >
+ <member name="LV_Total" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Measure" hide="false" expand="true" >
+ <member name="budget_rub" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="View" hide="true" expand="true" >
+ <member name="View_Layer_0001" />
+</dimension>
+</segment>
+</rows>
+ <pages>
+ <segment>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Cost_Center" hide="false" >
+ <member name="CC_010101" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Years" hide="false" >
+ <member name="&amp;vCurrYear" />
+ <function include="true" name="Siblings" >
+ <member name="&amp;vCurrYear" />
+</function>
+ <function name="Children" >
+ <member name="FY20" />
+</function>
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Period" hide="false" >
+ <function name="ILvl0Descendants" >
+ <member name="YearTotal" />
+</function>
+ <member name="YearTotal" />
+</dimension>
+</segment>
+</pages>
+ <pov>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Scenario" hide="false" >
+ <member name="SC_Budget" visible="true" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Version" hide="false" >
+ <member name="VR_Work" visible="true" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="i_Cost_Center" hide="true" >
+ <member name="ICC_NA" visible="true" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="Product" hide="true" >
+ <member name="Product_NA" visible="true" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="TestPOV" hide="true" >
+ <member name="TestPOV_NA" visible="true" />
+</dimension>
+ <dimension displayName="false" displayAlias="true" displayMemberFormula="false" displayConsolidationOperators="false" applyToAllDim="false" name="TestPOV2" hide="true" >
+ <member name="TestPOV2_NA" visible="true" />
+</dimension>
+</pov>
+</query>
+ <businessRules>
+ <businessRule calcType="3" name="DEFAULT" planType="1" />
+ <businessRule calcType="0" name="0100.02 Формирование базы" planType="1" runOnSave="true" useMRU="true" />
+</businessRules>
+ <displayOptions>
+ <precision useCurrencyPrecision="false" nonCurrencyMax="3" nonCurrencyMin="0" currencyMax="3" percentageMax="2" currencyMin="0" percentageMin="0" />
+ <display poundMissing="true" enableAttributeDisplay="false" enableCellAttach="true" enableAdHoc="false" multiCurrency="false" enableMassAllocation="false" accountAnnotation="false" enableGridSpread="true" />
+ <printOptions>
+ <pageSettings pageSize="A4" orientation="0" font="" fontSize="8" rowHeaderPercentage="35" numDataCols="10" />
+ <format supportingDetails="false" applyPrecision="false" repeatHeaders="true" reverseSupport="false" formatData="true" />
+ <printDisplay currency="true" shading="true" cellNotes="false" attribute="true" accountAnnotation="true" />
+</printOptions>
+ <smartViewOptions enableForSmartSlice="false" enableOfflineUsage="false" />
+</displayOptions>
+ <dataValidationRules>
+ <dataValidationRulesOptions>
+ <RunValidationsAsLoggedInUser>true</RunValidationsAsLoggedInUser>
+ <ValidateOnlyForPagesWithBlocks>true</ValidateOnlyForPagesWithBlocks>
+ <ValidateOnlyForUsersWithAccessToForm>true</ValidateOnlyForUsersWithAccessToForm>
+</dataValidationRulesOptions>
+</dataValidationRules>
+ <formFormattings>
+</formFormattings>
+</form>

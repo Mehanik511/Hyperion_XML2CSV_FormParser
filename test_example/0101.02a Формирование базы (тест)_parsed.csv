@@ -2,12 +2,12 @@
 Forms/0100 Бюджет/0101 База
 
 <Измерения среза>
-Scenario;Version;i_Cost_Center;Product;TestPOV;TestPOV2
-SC_Budget;VR_Work;ICC_NA;Product_NA;TestPOV_NA;TestPOV2_NA
+Scenario;Version;i_Cost_Center;Product;TestPOV;TestPOV2;
+SC_Budget;VR_Work;ICC_NA;Product_NA;TestPOV_NA;TestPOV2_NA;
 
 <Измерения страниц>
-Cost_Center;Years;Period
-CC_010101;&vCurrYear,ISiblings(&vCurrYear),Children(FY20);ILvl0Descendants(YearTotal),YearTotal
+Cost_Center;Years;Period;
+CC_010101;&vCurrYear,ISiblings(&vCurrYear),Children(FY20);ILvl0Descendants(YearTotal),YearTotal;
 
 <Измерения cтолбцов и строк>
 ;;;;Entity;Descendants(EN_Total);EN_base,Descendants(EN_Total);

@@ -79,8 +79,8 @@ for varFileInputFullPath in sys.argv[1:]:
     varResultPOVString1 = varResultPOVString1.replace('&amp;','&')
     varResultPOVString2 = varResultPOVString2.replace('&amp;','&')
     #Delete last char - delimiter
-    varResultPOVString1 = varResultPOVString1[:-1]
-    varResultPOVString2 = varResultPOVString2[:-1]
+    #varResultPOVString1 = varResultPOVString1[:-1]
+    #varResultPOVString2 = varResultPOVString2[:-1]
     
     #----- Getting Pages elements -----
     varResultPagesString1   = ""
@@ -122,8 +122,8 @@ for varFileInputFullPath in sys.argv[1:]:
     
     varResultPagesString2 = varResultPagesString2.replace('&amp;','&')
     #Delete last char - delimiter
-    varResultPagesString1 = varResultPagesString1[:-1]
-    varResultPagesString2 = varResultPagesString2[:-1]
+    #varResultPagesString1 = varResultPagesString1[:-1]
+    #varResultPagesString2 = varResultPagesString2[:-1]
     
     #----- Getting Rows elements -----
     varResultRowsString1        = ""
@@ -293,27 +293,20 @@ for varFileInputFullPath in sys.argv[1:]:
     varFileOutputName = ""
     varFileOutputName = re.split('.xml', varFileInputFullPath)[0] + '_parsed' + '.xlsx'
     
-    #Create a workbook and add a worksheet
+    #Create workbook and add worksheet
     xlsxWorkbook = xlsxwriter.Workbook(varFileOutputName)
     xlsxWorksheet = xlsxWorkbook.add_worksheet()
     
-    #Some data we want to write to the worksheet
+    #Data to write to the worksheet
     varArrayCSVStrings = []
-    #expenses = (
-    #    ['Rent', 1000],
-    #    ['Gas',   100],
-    #    ['Food',  300],
-    #    ['Gym',    50],
-    #)
     
     #print('['+varStringResultCSV+']')
     varArrayCSVStrings = re.split('\n', varStringResultCSV)
     
-    #Start from the first cell. Rows and columns are zero indexed.
     row = 0
     col = 0
     
-    #Add a bold and italic format to use to highlight cells.
+    #Text formatting
     format_Bold         = xlsxWorkbook.add_format({'bold': True})
     format_BoldItalic   = xlsxWorkbook.add_format({'bold': True, 'italic': True})
     format_ColorGray    = xlsxWorkbook.add_format({'font_color': '#808080'})
